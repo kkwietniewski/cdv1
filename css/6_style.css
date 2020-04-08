@@ -1,0 +1,29 @@
+li {
+    display: inline;
+    margin-right: 5px;
+}
+
+li.hidden {
+    display: none;
+}
+
+li.hidden_v {
+    visibility: hidden;
+}
+
+p.one {
+    -webkit-box-shadow: -5px -15px #666;
+    -moz-box-shadow: -5px -5px #666;
+}
+
+p.two {
+    -webkit-box-shadow: -5px -5px 15px #666;
+}
+
+p.three {
+    -webkit-box-shadow: 0 0 10px #666;
+}
+
+p.four {
+    -webkit-box-shadow: inset 0 0 10px #666;
+}

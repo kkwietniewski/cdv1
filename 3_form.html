@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="css/3_style.css">
+</head>
+
+<body>
+    <form method="GET">
+        <input type="text" name="name" id="name" placeholder="Imię" autofocus autocomplete="off"><br>
+        <input type="text" name="surname" placeholder="Nazwisko">
+        <br>
+        <input type="password" name="pass">
+        <br>
+        Miasto:<br>
+        <input type="radio" name="city" value="p" checked>Poznań
+        <input type="radio" name="city" value="g">Gniezno
+        <input type="radio" name="city" value="j">Jarocin<br>
+
+        Marka:
+        <select name="car">
+            <optgroup label="Marka:">
+                <option value="Ferrari">Ferrari</option>
+                <option value="Fiat">Fiat</option>
+            <optgroup label="Model:">
+                <option value="California">California</option>
+                <option value="126p">126p</option>
+        </select>
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+
+</html>

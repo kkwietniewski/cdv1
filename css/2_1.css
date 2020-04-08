@@ -1,0 +1,20 @@
+table {
+    margin: 10px;
+
+}
+
+table,
+tr,
+th,
+td {
+    border: solid thin gray;
+    padding: 8px;
+    border-collapse: collapse;
+
+    border-top-style: none;
+}
+
+th {
+    background-color: grey;
+    color: aliceblue
+}
