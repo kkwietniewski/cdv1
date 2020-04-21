@@ -1,0 +1,1 @@
+Oblicz ile sekund, godzin, dni, lat jest pomiędzy datami które podaje użytkownik 
