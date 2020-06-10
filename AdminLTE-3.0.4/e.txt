@@ -1,0 +1,3 @@
+szablon admin.php zakonczony
+dokonczyc zabezpieczenia na stronie admin.php
+dodac wylogowanie uzytkownika

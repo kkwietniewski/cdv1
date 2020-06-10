@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,14 +26,41 @@
   <div class="login-logo">
     <a href="../"><b>Admin</b>LTE</a>
   </div>
+
+  <?php
+    if (isset($_GET['register'])) {
+      echo <<<SUCCESS
+      <div class="info-box bg-success">
+              <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+              <div class="info-box-content">              
+                <span class="info-box-number">Prawidlowo dodano uzytkownika.</span>
+                </span>
+              </div>
+            </div>
+SUCCESS;
+    }
+
+    if (isset($_GET['error'])) {
+      echo <<<SUCCESS
+      <div class="info-box bg-danger">
+              <span class="info-box-icon"><i class="fas fa-comments"></i></span>
+              <div class="info-box-content">              
+                <span class="info-box-number">$_SESSION[error]</span>
+                </span>
+              </div>
+            </div>
+SUCCESS;
+unset($_SESSION['error']);
+    }
+  ?>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../scripts/add_user.php" method="post">
+      <form action="./scripts/login.php" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Name">
+          <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -38,7 +68,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="pass">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

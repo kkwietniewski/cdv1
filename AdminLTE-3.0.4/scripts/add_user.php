@@ -36,6 +36,10 @@
         $birthday = $_POST['birthday'];
         $city=1;
 
+
+        //szyfrowanie hasla argon2id
+        $pass = password_hash($pass, PASSWORD_ARGON2ID);
+
         require_once './connect.php';
 
         if($conn->connect_errno){
@@ -55,9 +59,6 @@
             $stmt->close();
             
             header('location: ../?register=success');
-            // /*
-            //     Dokonczyc wyswietlanie komunikatu po prawidlowym dodaniu uzytkownika do bazy danych na stronie index.php, szyfrowanie haseł argonem2
-            // */
             exit();
         }else{
             //sprawdzenie czy istnieje w bazie danych email podany przez użytkownika
