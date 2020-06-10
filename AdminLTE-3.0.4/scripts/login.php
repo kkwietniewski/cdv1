@@ -20,21 +20,26 @@
             $user = $result->fetch_assoc();
             //echo $user['pass'];
             if (password_verify($pass, $user['pass'])) {
-                switch ($user['status_id']) {
-                    case 1:
-                        $_SESSION['logged']['name'] = $user['name'];
-                        $_SESSION['logged']['surname'] = $user['surname'];
-                        $_SESSION['logged']['email'] = $user['email'];
-                        $_SESSION['logged']['permission'] = $user['permission'];
+                header ('location: ../pages/logged/admin.php');
+            //     switch ($user['status_id']) {
+            //         case 1:
+            //             $_SESSION['logged']['name'] = $user['name'];
+            //             $_SESSION['logged']['surname'] = $user['surname'];
+            //             $_SESSION['logged']['email'] = $user['email'];
+            //             $_SESSION['logged']['permission'] = $user['permission'];
 
-                    break;
-                    case 2:
-                        $_SESSION['error'] = 'Konto jest nieaktywne<br>Email:'.$user['email'];
-                    break;
-                    case 3:
-                        $_SESSION['error'] = 'Konto jest zablokowane';
-                    break;
-                    
+            //         break;
+            //         case 2:
+            //             $_SESSION['error'] = 'Konto jest nieaktywne<br>Email:'.$user['email'];
+            //         break;
+            //         case 3:
+            //             $_SESSION['error'] = 'Konto jest zablokowane';
+            //         break;
+                    exit();
+            }
+            else{
+                $error = 1;
+                $_SESSION['error'] = 'Błędny login lub haslo!';
             }
             
             if ($user['status_id'] != 1) {
@@ -55,13 +60,9 @@
                     break;
                 }
             }
-                exit();
-            }else{
-                $error = 1;
-                $_SESSION['error'] = 'Błędny login lub haslo!';
-            }
-            
-        }else{
+                // exit();
+        }  
+        else{
             $error = 1;
             $_SESSION['error'] = 'Błędny login lub haslo!';
         }
