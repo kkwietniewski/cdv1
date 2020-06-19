@@ -1,6 +1,7 @@
 <?php
-session_start();
+session_start(); 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,48 +12,48 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="./plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>Admin</b>LTE</a>
   </div>
 
   <?php
-    if (isset($_GET['register'])) {
-      echo <<<SUCCESS
-      <div class="info-box bg-success">
-              <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
-              <div class="info-box-content">              
-                <span class="info-box-number">Prawidlowo dodano uzytkownika.</span>
-                </span>
-              </div>
-            </div>
-SUCCESS;
-    }
+  if (isset($_SESSION['error'])){
+    echo <<<ERROR
+    <div class="card card-outline card-warning"> 
+    <div class="card-header">
+                <h3 class="card-title">$_SESSION[error]</h3>
+                </div>
+                </div>
+ERROR;
+                unset($_SESSION['error']) ;
+  }
+?>
 
-    if (isset($_GET['error'])) {
-      echo <<<SUCCESS
-      <div class="info-box bg-danger">
-              <span class="info-box-icon"><i class="fas fa-comments"></i></span>
-              <div class="info-box-content">              
-                <span class="info-box-number">$_SESSION[error]</span>
-                </span>
-              </div>
+<?php
+  if (isset($_SESSION['register'])){
+    echo <<<SUCCESS
+    <div class="info-box bg-success"> 
+            <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+          <div class="card-content">
+                <h3 class="card-title">Zalogowano!</h3>
             </div>
+          </div>
 SUCCESS;
-unset($_SESSION['error']);
-    }
-  ?>
+                unset($_SESSION['error']) ;
+  }
+?>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">

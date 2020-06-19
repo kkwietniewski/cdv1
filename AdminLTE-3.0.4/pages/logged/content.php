@@ -538,7 +538,7 @@
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer text-center">
-                    <a href="javascript::">View All Users</a>
+                    <a href="../../javascript::">View All Users</a>
                   </div>
                   <!-- /.card-footer -->
                 </div>
@@ -638,8 +638,8 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
-                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
+                <a href="../../javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="../../javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
               </div>
               <!-- /.card-footer -->
             </div>
@@ -780,7 +780,7 @@
                       <img src="../../dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
-                      <a href="javascript:void(0)" class="product-title">Samsung TV
+                      <a href="../../javascript:void(0)" class="product-title">Samsung TV
                         <span class="badge badge-warning float-right">$1800</span></a>
                       <span class="product-description">
                         Samsung 32" 1080p 60Hz LED Smart HDTV.
@@ -793,7 +793,7 @@
                       <img src="../../dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
-                      <a href="javascript:void(0)" class="product-title">Bicycle
+                      <a href="../../javascript:void(0)" class="product-title">Bicycle
                         <span class="badge badge-info float-right">$700</span></a>
                       <span class="product-description">
                         26" Mongoose Dolomite Men's 7-speed, Navy Blue.
@@ -806,7 +806,7 @@
                       <img src="../../dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
-                      <a href="javascript:void(0)" class="product-title">
+                      <a href="../../javascript:void(0)" class="product-title">
                         Xbox One <span class="badge badge-danger float-right">
                         $350
                       </span>
@@ -822,7 +822,7 @@
                       <img src="../../dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
-                      <a href="javascript:void(0)" class="product-title">PlayStation 4
+                      <a href="../../javascript:void(0)" class="product-title">PlayStation 4
                         <span class="badge badge-success float-right">$399</span></a>
                       <span class="product-description">
                         PlayStation 4 500GB Console (PS4)
@@ -834,7 +834,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer text-center">
-                <a href="javascript:void(0)" class="uppercase">View All Products</a>
+                <a href="../../javascript:void(0)" class="uppercase">View All Products</a>
               </div>
               <!-- /.card-footer -->
             </div>
